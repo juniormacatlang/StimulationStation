@@ -4,6 +4,8 @@ import Games from "./components/Games/Games"
 import Feedback from "./components/Feedback/Feedback"
 import Fidgets from "./components/Fidgets/Fidgets"
 import Menu from "./components/Menu/Menu"
+import About from "./components/About/About"
+import Settings from "./components/Settings/Settings"
 
 import "./app.scss"
 import { useState } from "react"
@@ -19,6 +21,8 @@ function App() {
         <Games/>
         <Fidgets/>
         <Feedback/>
+        <About/>
+        <Settings/>
       </div>
     </div>
   );

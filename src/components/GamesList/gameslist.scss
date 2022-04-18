@@ -1,0 +1,13 @@
+
+.GamesList{
+    font-size: 13px;
+    margin-right: 45px;
+    padding: 7px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &.active{
+        background-color: #156064;
+        color: white;
+    }
+}

@@ -35,7 +35,7 @@ export default function Fidgets() {
           {data.map((d) => (
           <div className={d.featured ? "card featured" : "card"}>
             <div className="top">
-              <img src="assets/play.png" className="left" alt="" />
+              <img src="assets/play.png" className="left" alt=""/>
               <img src={d.img} className="item" alt="" />
               <img src={d.icon} className="right" alt="" />
             </div>
@@ -44,7 +44,7 @@ export default function Fidgets() {
             </div>
             <div className="bottom">
               <h3>{d.name}</h3>
-              <h4>Play.</h4>
+              <h4 onClick={()=> {window.open('http://localhost:8080/FidgetTool/FidgetTool.html', '_blank');}}>Play.</h4>
             </div>
           </div>
           ))}

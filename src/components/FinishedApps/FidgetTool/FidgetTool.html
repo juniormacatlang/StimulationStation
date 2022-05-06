@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Cookie Click Game</title>
+
+   <!-- Css Link -->
+   <link rel="stylesheet" href="FidgetTool.css">
+</head>
+<body>
+
+   <!-- Main Container -->
+   <div class="main-container">
+      <div class="main">
+         <!-- Main Box -->
+         <div class="main-box">
+            <div class = "title"><span id="title"></span></div>
+	    
+	    <!--<div class = "pictures"><img src="cookie.png" style="width:100%;"></div>-->
+            <div class="show-answer"><span id="ans"></span></div>
+            <!-- button -->
+            <div class="box2">
+            	<input type="image" src="cookie.png" onclick="Click()" class="btn"></button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <script>
+   	   document.getElementById("title").innerHTML = "Cookie Clicker!"
+   	   document.getElementById("ans").innerHTML = "[0] Clicks."
+   	   clicks = 0;
+           function Click(){
+           	clicks = clicks + 1;	
+           	switch(clicks){
+           		case 10:
+           		document.getElementById("ans").innerHTML = "[" + clicks + "] Clicks! Great!";
+           		break;
+           		case 20:
+           		document.getElementById("ans").innerHTML = "[" + clicks + "] Clicks! Clicktactular!";
+           		break;
+           		case 30:
+           		document.getElementById("ans").innerHTML = "[" + clicks + "] Clicks! Mega Clicks!";
+           		break;
+           		default:
+           		document.getElementById("ans").innerHTML = "[" + clicks + "] Clicks!";
+           	}
+           }
+   </script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Multiplication Game</title>
+
+   <!-- Css Link -->
+   <link rel="stylesheet" href="MathGame.css">
+</head>
+<body>
+
+   <!-- Main Container -->
+   <div class="main-container">
+      <div class="main">
+         <!-- Main Box -->
+         <div class="main-box">
+            <div class = "title"> Multiplication Madness! </div>
+            <div class="show-answer"><span id="ans"></span></div>
+
+            <div class="box1">
+               <div class="box-col">
+                  <input type="textf" id="intext" class="intext11">
+               </div>
+
+               <div class="mul-s">
+                  <p>*</p>
+               </div>
+
+                <div class="box-col">
+                  <input type="textf" id="intext1" class="intext11">
+               </div>
+
+            </div>
+
+            <!-- text input -->
+            <div class="box2">
+               <input tpye="text" id="intext2">
+            </div>
+
+            <!-- button -->
+             <div class="box2">
+               <button class="btn" onclick="Game()"> Check Answer</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <script>
+      document.getElementById("ans").innerHTML = "What is the multiplied Value?"
+      let n1 = Math.floor(Math.random()*10+1);
+      let n2 = Math.floor(Math.random()*10+1);
+
+      document.getElementById("intext").value = n1;
+      document.getElementById("intext1").value = n2;
+
+      let mul= n1 * n2;
+
+      var score = 0;
+
+      function Game(){
+         var user= document.getElementById("intext2").value;
+
+         if( user == mul){
+            score = score + 1;
+            document.getElementById("ans").innerHTML = "Well Done! Correct answers: " + score;
+         }else{
+             document.getElementById("ans").innerHTML = "Oops! The correct value is " + mul + ". Try Again!";
+         }
+
+           var user= document.getElementById("intext2").value = "";
+
+
+      n1 = Math.floor(Math.random()*10+1);
+      n2 = Math.floor(Math.random()*10+1);
+
+      document.getElementById("intext").value = n1;
+      document.getElementById("intext1").value = n2;
+
+      mul = n1 * n2;
+
+
+      }
+   </script>
+
+</body>
+</html>
